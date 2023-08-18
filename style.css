@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 200px 200px;
+    grid-auto-rows: 200px;
+    width: 100%;
+
+}
+.container div{
+    color: white;
+}
+.head{
+    grid-column: span 2;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    background-color: #614BC3;
+}
+.one{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.one-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #614BC3;
+    width: 120px;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+}
+.two{
+    grid-row: span 2;
+    background-color: rgb(3, 255, 171);
+}
+.three{
+    background-color: blueviolet;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.three h2{
+    margin-bottom: 10px;
+}
+.four{
+    grid-column: span 2;
+    background-color: #614BC3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.nav-item{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 50px;
+    font-size: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    font-size: 30px;
+}
+.nav-item .active{
+    color: aqua;
+}
+@media (max-width: 450px){
+    .logo{
+        font-size: 1rem;
+    }
+    .nav-item li a{
+        font-size: .8rem;
+        margin-right: 10px;
+    }
+    .one{
+        flex-direction: column;
+    }
+    .one-item{
+        height: 40px;
+        width: 50px;
+    }
+}
+@media (max-width: 850px) and (min-width:  451px){
+    .one-item{
+        width: 3.3rem;
+    }
+}
+@media (max-width : 495px)
+{
+    .three h2{
+        font-size: 1rem;
+    }
+    .three p{
+        font-size: .7rem;
+    }
+    .four{
+        font-size: .7rem;
+    }
+
+    
+}
+@media (min-width: 851px) and (max-width :1000px){
+    .one-item{
+        width: 5rem;
+    }
+}
